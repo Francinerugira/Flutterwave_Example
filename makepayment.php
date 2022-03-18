@@ -12,7 +12,7 @@ if (isset($_POST['pay'])) {
         'amount' => $amount,
         'currency' => 'RWF',
         'payment_options' => 'mobilemoneyrwanda',
-        'redirect_url' => 'http://localhost:8080/flutterExample/process.php', //edit too
+        'redirect_url' => 'http://localhost/flutterExample/', //edit too
          //edit too
         'customer' => [
             'email' => $email,
@@ -57,8 +57,8 @@ if (isset($_POST['pay'])) {
     {
         $link = $res->data->link;
         header('Location: '.$link);
-        $_SESSION['email'] = $email;
-        $_SESSION['username'] = $username;
+        // $_SESSION['email'] = $email;
+        // $_SESSION['username'] = $username;
     }
     else
     {
